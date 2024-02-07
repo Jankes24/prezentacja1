@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wpisz nikc</title>
+    <link rel="stylesheet" href="styleNick.css">
+</head>
+<body>
+    <div><b>Podaj Nick</b></div>
+    <div><input type="text" id="input"></div>
+    <div><button onclick="link()">POTWIERDZ</button></div>
+    <script>
+        function link(){
+            window.location.href = `quiz.html?nick=${document.getElementById("input").value}`;
+        }
+    </script>
+</body>
+</html>

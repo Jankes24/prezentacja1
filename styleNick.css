@@ -1,0 +1,36 @@
+body{
+    align-content: center;
+    background-color: rgb(255, 236, 201);
+}
+
+input{
+    font-size: 30px;
+    padding: 8px;
+    margin: 10px auto;
+    border-radius: 14px;
+    text-align: center;
+    background-color: rgb(141, 141, 141);
+}
+
+div{
+    margin: 20px auto;
+    width: 20%;
+    padding: 10px;
+}
+
+button{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: 30%;
+}
+
+b{
+    text-align: center;
+    font-size: 40px;
+    background-color: azure;
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 10px;
+    margin: 20%;
+}

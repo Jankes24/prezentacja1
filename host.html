@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOST</title>
+    <link rel="stylesheet" href="styleHost.css">
+</head>
+<body>
+    <h1 id="h1">cos</h1>
+    <div><button onclick="send()">refrash</button></div>
+    <script>
+    function send()
+    {
+        fetch('http://127.0.0.1:8888/host.html').then(response => response.json()).then(data => {
+            const h1Element = document.getElementById('h1');
+            h1Element.innerText = '';
+            data.forEach(element => {
+                if (!element.state){
+                const newH1Element = document.createElement('h2');
+                newH1Element.innerText = `${element.nazwa} : ${element.punkty}`;
+                h1Element.appendChild(newH1Element);
+                }
+        });   
+        })
+    }
+    send();
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Control') {
+            fetch('http://127.0.0.1:8888/host.html').then(response => response.json()).then(data => {
+            const h1Element = document.getElementById('h1');
+            h1Element.innerText = '';
+            data.forEach(element => {
+                if (element.state){
+                const newH1Element = document.createElement('h2');
+                newH1Element.innerText = `${element.nazwa} : ${element.punkty}`;
+                h1Element.appendChild(newH1Element);
+                }
+        });   
+        })
+        }
+        });
+    </script>
+</body>
+</html>
