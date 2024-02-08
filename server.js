@@ -6,18 +6,12 @@ const nick = [];
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.send('oki');
-    res.status(200).end();
-});
 
-
-
-app.post('/client.html', (req, res) => {
+app.post('https://jankes24.github.io/prezentacja1/quiz.html', (req, res) => {
     nick.push(req.body);
     console.log(nick);
     res.status(200).end();
-    app.get('/host.html', (req, res) => {
+    app.get('https://jankes24.github.io/prezentacja1/host.html', (req, res) => {
         const serverData = nick;
         res.json(serverData);
     });
