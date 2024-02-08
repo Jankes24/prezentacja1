@@ -237,7 +237,7 @@ function showScore() {
             punkty: score,
             state: true
         };
-        fetch("http://127.0.0.1:8888/client.html", {
+        fetch("https://prezentacja1-eeddc3faada2.herokuapp.com/", {
             method: "POST",
             body: JSON.stringify(dane),
             headers: {
@@ -259,7 +259,7 @@ function showScore() {
             punkty: score,
             state: false
         };
-        fetch("http://127.0.0.1:8888/client.html", {
+        fetch("https://prezentacja1-eeddc3faada2.herokuapp.com/", {
             method: "POST",
             body: JSON.stringify(dane),
             headers: {
